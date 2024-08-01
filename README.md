@@ -1,5 +1,7 @@
 # Education Perfection | Zariffs
 
+## be sure to star the project!
+
 ## Description
 Answer ep questions automatically, will automatically fill in the question box, just spam enter, works as of 01/07/24 
 
