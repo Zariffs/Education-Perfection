@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Education Perfection | Zariffs
 // @namespace    https://educationperfect.com
-// @version      1.9
-// @description  New ep bot for new ep things!
+// @version      1.0
+// @description  An education perfect bot that works with the new education perfect ui and systems
 // @author       zariffs
 // @match        *://*/*
 // @grant        none
@@ -52,7 +52,7 @@
         console.log("Extracted answers:", y);
         var inputElement = document.getElementById("answer-text-container").children[0];
         inputElement.value = y[0];
-        lastSubmittedAnswer = y[0];  // Update the last submitted answer
+        lastSubmittedAnswer = y[0];
         checkIfInputStays(inputElement);
     }
 
@@ -60,7 +60,7 @@
         setTimeout(() => {
             if (inputElement.value === '') {
                 console.log("Input box was cleared, re-setting answer:", lastSubmittedAnswer);
-                inputElement.value = lastSubmittedAnswer;  // Reset the last submitted answer
+                inputElement.value = lastSubmittedAnswer; 
                 checkIfInputStays(inputElement);  // Recursively check until input stays populated | kinda broken
             } else {
                 console.log("Input box populated with answer:", inputElement.value);
@@ -187,6 +187,5 @@
         }
     });
 
-    // Start waiting for the preview items
     waitForPreviewItems();
 })();
